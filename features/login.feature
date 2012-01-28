@@ -16,5 +16,5 @@ Feature: user login
         When I go to the login page
         And I fill in "Username" with "byron"
         And I fill in "Password" with "bcd234"
-        And I hit "Login"
+        And I click on "Login"
         Then I see "Incorrect username or password"

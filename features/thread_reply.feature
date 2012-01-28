@@ -9,5 +9,5 @@ Feature: thread reply
         And I am on the thread index page
         When I click on "Funny Thread"
         And I fill in "Reply" with "This thread is pretty dang funny."
-        And I hit "Post"
+        And I click on "Post"
         Then I see "Reply posted"

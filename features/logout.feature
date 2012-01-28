@@ -6,5 +6,5 @@ Feature: user logout
     Scenario:
         Given I am a logged in user
         And I am on my dashboard page
-        When I click "Logout"
+        When I click on "Logout"
         Then I see "Logged out successfully"

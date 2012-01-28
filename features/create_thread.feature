@@ -9,5 +9,5 @@ Feature: user creates a forum discussion thread
         When I click on "Create Thread"
         And I fill in "Title" with "Test title"
         And I fill in "Body" with "Test body"
-        And I hit "Post"
+        And I click on "Post"
         Then I see "Thread created"

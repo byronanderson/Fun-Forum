@@ -34,7 +34,10 @@ group :test do
   gem "guard-livereload"
   gem "guard-cucumber"
   gem "guard-spork"
+  gem "factory_girl_rails"
 end
+
+gem "authlogic"
 
 
 # To use ActiveModel has_secure_password
