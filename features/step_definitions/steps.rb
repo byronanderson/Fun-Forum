@@ -1,3 +1,10 @@
+def login(user)
+  visit login_path
+  fill_in "Username" with user.username
+  fill_in "Password" with user.password
+  click_on "Login"
+end
+
 Given /^I am the user "([^"]*)" and I am logged in$/ do |name|
   @user = Factory(:user, username: name)
 end
@@ -58,3 +65,14 @@ end
 Given /^I am on the thread index page$/ do
   visit threads_path
 end
+
+
+
+Given /^I am an unregistered user$/ do
+  # nothing!
+end
+
+Given /^I am on the registration page$/ do
+  visit "/register"
+end
+
