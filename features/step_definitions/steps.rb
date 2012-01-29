@@ -1,7 +1,7 @@
 def login(user)
   visit login_path
-  fill_in "Username" with user.username
-  fill_in "Password" with user.password
+  fill_in "Username", with: user.username
+  fill_in "Password", with: user.password
   click_on "Login"
 end
 

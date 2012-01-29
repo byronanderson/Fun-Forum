@@ -1,0 +1,9 @@
+
+  <nav>
+    <ul>
+      <% if current_user %>
+      <% else %>
+        <li><%= link_to "Register", registration_path %></li>
+      <% end %>
+    </ul>
+  </nav>
