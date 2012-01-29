@@ -1,4 +1,9 @@
 FunForum::Application.routes.draw do
+  resources :users, :user_sessions, :threads, :replies
+  match 'register' => 'users#new'
+  match 'login' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
+  root to: 'threads#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @thread.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @thread.body %>
+</p>
+<div id="replies">
+  <% @thread.replies.each do |reply| %>
+    <div class="reply">
+      <p>Reply: <%= reply.body %></p>
+    </div>
+  <% end %>
+</div>
+
+<%= form_for(@reply) do |f| %>
+  <%= f.hidden_field :forum_thread_id %>
+  <div class="field">
+    <%= f.label :body, "Reply" %><br />
+    <%= f.text_field :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Post" %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Edit', edit_thread_path(@thread) %> |
+<%= link_to 'Back', threads_path %>

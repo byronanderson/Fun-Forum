@@ -11,3 +11,4 @@ Feature: thread reply
         And I fill in "Reply" with "This thread is pretty dang funny."
         And I click on "Post"
         Then I see "Reply posted"
+        And I see "This thread is pretty dang funny"

@@ -2,8 +2,11 @@
   <nav>
     <ul>
       <% if current_user %>
+        <li><%= link_to "Create Thread", new_thread_path %></li>
+        <li><%= link_to "Logout", logout_path %></li>
       <% else %>
-        <li><%= link_to "Register", registration_path %></li>
+        <li><%= link_to "Register", new_user_path %></li>
+        <li><%= link_to "Login", login_path %></li>
       <% end %>
     </ul>
   </nav>

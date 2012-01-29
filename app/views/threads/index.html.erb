@@ -1,0 +1,21 @@
+<h1>Listing threads</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @threads.each do |thread| %>
+  <tr>
+    <td><%= link_to thread.title, "/threads/#{thread.id}" %></td>
+    <td><%= link_to 'Edit', edit_thread_path(thread) %></td>
+    <td><%= link_to 'Destroy', "/threads/#{thread.id}", confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Thread', new_thread_path %>

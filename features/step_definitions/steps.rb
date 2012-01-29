@@ -2,11 +2,12 @@ def login(user)
   visit login_path
   fill_in "Username", with: user.username
   fill_in "Password", with: user.password
-  click_on "Login"
+  click_on "Log in"
 end
 
 Given /^I am the user "([^"]*)" and I am logged in$/ do |name|
   @user = Factory(:user, username: name)
+  login(@user)
 end
 
 Given /^I am on my dashboard page$/ do
@@ -26,7 +27,7 @@ When /^I fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
 end
 
 Then /^I see "([^"]*)"$/ do |text|
-  page.should have_content text
+  page.should have_content(text)
 end
 
 Given /^I am user "([^"]*)" with password "([^"]*)"$/ do |name, password|
